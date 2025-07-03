@@ -14,7 +14,29 @@ export default function Selector() {
 
     return (
         <Box sx={{ minWidth: 120 }}>
-            <FormControl fullWidth>
+            <FormControl
+                fullWidth
+                sx={{
+                    "& .MuiInputLabel-root": { color: "#F4F4F9" }, // Label color
+                    "& .MuiOutlinedInput-root": {
+                        "& fieldset": {
+                            borderColor: "#F4F4F9", // Default border
+                        },
+                        "&:hover fieldset": {
+                            borderColor: "#A29BFE", // On hover
+                        },
+                        "&.Mui-focused fieldset": {
+                            borderColor: "#A29BFE", // On focus
+                        },
+                    },
+                    "& .MuiSelect-root": {
+                        color: "#A29BFE", // Selected text
+                    },
+                    "& .MuiSvgIcon-root": {
+                        color: "#F4F4F9", // Dropdown arrow
+                    },
+                }}
+            >
                 <InputLabel id="demo-simple-select-label">Age</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
